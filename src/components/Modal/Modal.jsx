@@ -1,5 +1,5 @@
 import { createPortal } from "react-dom";
-import { dateFunc } from "../../utils/dateFunc";
+import { formatDate } from "../../utils/formatDate";
 import ModalHeader from "./ModalElements/ModalHeader";
 import ModalContent from "./ModalElements/ModalContent";
 import ModalFooter from "./ModalElements/ModalFooter";
@@ -19,12 +19,12 @@ const Modal = ({
   useModalLockAndEsc(isOpen, onClose);
   const onBackdropMouseDown = useModalBackdrop(onClose);
 
-  const formattedDate = createdAt ? dateFunc(createdAt) : "";
+  const formattedDate = createdAt ? formatDate(createdAt) : "";
 
   return createPortal(
     <div
       onMouseDown={onBackdropMouseDown}
-      className="fixed inset-0 z-50 flex bg-black/40 items-center justify-center"
+      className="fixed inset-0 z-50 flex bg-dimmed-opacity items-center justify-center"
     >
       <div
         role="dialog"
@@ -33,7 +33,7 @@ const Modal = ({
         className={cn(
           "rounded-[20px] bg-white shadow-lg border border-gray-200 p-6",
           "flex flex-col overflow-hidden",
-          "w-[70vw] h-[40vh] min-h-[300px]",
+          "w-[90vw] max-w-[600px] h-[40vh] min-h-[300px]",
           "tablet:w-[600px] tablet:h-[476px]",
           "desktop:w-[600px] desktop:h-[476px]"
         )}

@@ -1,4 +1,4 @@
-import { memo, useRef } from "react";
+import { memo, useContext, useRef } from "react";
 import Button from "../Button/Button";
 import Icon from "../Icon/Icon";
 import EmojiPicker from "emoji-picker-react";
@@ -7,6 +7,7 @@ import { cn } from "../../utils";
 import { usePostEmoji } from "../../features/HeaderService/hooks/usePostEmoji";
 import useClickOutside from "../../features/TextDropdown/hooks/useClickOutside";
 import { useQueryClient } from "@tanstack/react-query";
+import { ThemeContext } from "../../features/HeaderService/Context/ThemeContext";
 
 /**
  * 이미지를 추가할 수 있는 드롭다운
@@ -17,6 +18,7 @@ const DropdownAddEmoji = ({ postId }) => {
   const { mutate, isPending, isSuccess } = usePostEmoji();
   const dropdownRef = useRef(null);
   const queryClient = useQueryClient();
+  const { theme } = useContext(ThemeContext);
   useClickOutside(dropdownRef, onClickClose);
 
   /**
@@ -77,6 +79,7 @@ const DropdownAddEmoji = ({ postId }) => {
             height={393}
             onEmojiClick={onClickAddEmoji}
             reactionsDefaultOpen={true}
+            theme={theme}
           />
         </div>
       </div>

@@ -23,8 +23,6 @@ export const usePostEmoji = () => {
       });
     },
     onError: (error) => console.error(error),
-    retry: 1,
-    retryDelay: 500,
   });
 
   return { mutate, isPending, isSuccess };

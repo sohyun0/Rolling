@@ -8,7 +8,7 @@ const useRecipientsCount = () => {
   useEffect(() => {
     const fetchTotalRecipients = async () => {
       try {
-        const res = await fetch(`${BASE_URL}/18-4/recipients/`);
+        const res = await fetch(`${BASE_URL}/recipients/`);
         if (!res.ok) throw new Error("Failed to fetch recipients count");
         const data = await res.json();
         setCount(data.count);

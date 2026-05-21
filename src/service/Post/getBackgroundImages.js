@@ -1,7 +1,7 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 const getBackgroundImage = async () => {
-  const res = await fetch(`${API_BASE_URL}/background-images/`);
+  const res = await fetch(`${API_URL}/background-images/`);
 
   if (!res.ok) {
     const errorText = await res.text();

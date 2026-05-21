@@ -1,7 +1,9 @@
 import { useState, useCallback } from "react";
+const TEAM_NAME = import.meta.env.VITE_TEAM_NAME;
+
 const usePostData = () => {
   const [createPostData, setCreatePostData] = useState({
-    team: "18-4",
+    team: TEAM_NAME,
     name: "",
     backgroundColor: "beige",
     backgroundImageURL: null,

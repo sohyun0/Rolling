@@ -9,6 +9,9 @@ import Button from "../components/Button/Button";
 import useMessageProfile from "../features/Message/hooks/useMessageProfile";
 import useMessageSubmit from "../features/Message/hooks/useMessageSubmit";
 import MetaTag from "../components/MetaTag/MetaTag";
+
+const TEAM_NAME = import.meta.env.VITE_TEAM_NAME;
+
 const style = {
   font: "text-24 font-bold text-gray-900 mb-[15px]",
 };
@@ -25,7 +28,7 @@ const Message = () => {
   const { mutate } = useMessageSubmit();
 
   const [postMessageData, setPostMessageData] = useState({
-    team: "18-4",
+    team: TEAM_NAME,
     recipientId: id,
     sender: "",
     profileImageURL: "",
@@ -101,7 +104,7 @@ const Message = () => {
     }
   }, []);
 
-  const handleSelectionChange = useCallback((range, oldRange, source) => {
+  const handleSelectionChange = useCallback((range) => {
     if (range && editorRef.current) {
       const format = editorRef.current.getFormat();
       let fontName = format.font;

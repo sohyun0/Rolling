@@ -1,6 +1,6 @@
-import { cn } from "../../../../utils";
+import { cn } from "../../../utils";
 import OptionFileLoadContent from "./OptionFileLoadContent";
-import Toast from "../../../../components/Toast/Toast";
+import Toast from "../../../components/Toast/Toast";
 import useOptionFileUpload from "../hooks/useOptionFileUpload";
 const labelClasses = [
   "group w-full cursor-pointer p-6 mt-10",

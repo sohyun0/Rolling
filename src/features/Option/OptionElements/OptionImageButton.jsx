@@ -1,7 +1,7 @@
 import OptionCheck from "./OptionCheck";
 import OptionButton from "./OptionButton";
 import defaultBgImage from "../../../assets/empty/img_background_null.png";
-import { cn } from "../../../../utils";
+import { cn } from "../../../utils";
 const whiteDimmedStyled =
   "after:absolute after:inset-0 after:bg-white-opacity-5 after:rounded-2xl after:z-[1] after:border-[3px] after:border-gray-500";
 /**

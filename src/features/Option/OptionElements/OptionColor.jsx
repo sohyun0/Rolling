@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import OptionColorButton from "./OptionColorButton";
-import BG_COLORS from "../../../../constants/backgroundColor";
+import BG_COLORS from "../../../constants/backgroundColor";
 import OptionWrapper from "./OptionWrapper";
 
 /**

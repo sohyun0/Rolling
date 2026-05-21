@@ -1,4 +1,4 @@
-import { cn } from "../../../../utils";
+import { cn } from "../../../utils";
 
 /**
  * 옵션 공통 컴포넌트 - (컬러/이미지 등) 버튼

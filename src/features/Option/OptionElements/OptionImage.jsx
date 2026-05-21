@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import OptionImageButton from "./OptionImageButton";
 import OptionWrapper from "./OptionWrapper";
 import OptionFile from "./OptionFile";
-import SkeletonUI from "../../../../components/Skeleton/SkeletonUI";
-import { cn } from "../../../../utils";
+import SkeletonUI from "../../../components/Skeleton/SkeletonUI";
+import { cn } from "../../../utils";
 /**
  * 옵션 리스트 컴포넌트 - 이미지 버튼 리스트
  *

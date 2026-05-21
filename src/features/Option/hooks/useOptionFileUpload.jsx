@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { validateFile } from "../../../../utils/validate";
+import { validateFile } from "../../../utils/validate";
 import useCloudinaryUpload from "./useCloudinaryUpload";
 
 const LIMIT_SIZE = 5;

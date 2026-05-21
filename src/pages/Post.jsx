@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import PostInput from "../features/Post/PostElements/PostInput";
 import PostOption from "../features/Post/PostElements/PostOption";
 import Container from "../components/Container/Container";
@@ -27,10 +27,16 @@ const Post = () => {
     handleImageSelect,
     resetName,
   } = usePostData();
-  const showToast = ({ icon = "alert", message, iconClassName = "bg-error" }) => {
-    setToast({ isOpen: true, icon, message, iconClassName });
-  };
-  const closeToast = () => setToast((prev) => ({ ...prev, isOpen: false }));
+  const showToast = useCallback(
+    ({ icon = "alert", message, iconClassName = "bg-error" }) => {
+      setToast({ isOpen: true, icon, message, iconClassName });
+    },
+    [],
+  );
+  const closeToast = useCallback(
+    () => setToast((prev) => ({ ...prev, isOpen: false })),
+    [],
+  );
   const { images, isLoading } = usePostImages(showToast);
   const {
     errorMsg,

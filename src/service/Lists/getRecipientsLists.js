@@ -9,7 +9,7 @@ const getRecipientsLists = async ({ index, sortOrder }) => {
   }
   const searchParams = new URLSearchParams(params).toString();
   const response = await fetch(
-    `${API_BASE_URL}/18-4/recipients/?${searchParams}`,
+    `${API_BASE_URL}/recipients/?${searchParams}`,
     {
       method: "GET",
     }

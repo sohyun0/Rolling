@@ -3,7 +3,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export const getHeaderService = async (recipientId) => {
   try {
     const response = await fetch(
-      `${API_BASE_URL}/18-4/recipients/${recipientId}/`,
+      `${API_BASE_URL}/recipients/${recipientId}/`,
       {
         method: "GET",
         headers: {

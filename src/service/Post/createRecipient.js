@@ -2,7 +2,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const createRecipient = async (data) => {
   try {
-    const res = await fetch(`${API_BASE_URL}/18-4/recipients/`, {
+    const res = await fetch(`${API_BASE_URL}/recipients/`, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

@@ -3,7 +3,7 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 export const postEmoji = async (reactionData) => {
   try {
     const response = await fetch(
-      `${API_BASE_URL}/18-4/recipients/${reactionData?.id}/reactions/`,
+      `${API_BASE_URL}/recipients/${reactionData?.id}/reactions/`,
       {
         method: "POST",
         body: JSON.stringify(reactionData?.reaction),

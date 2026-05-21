@@ -1,7 +1,7 @@
 // 모든 데이터 가져오기
 export const fetchAllRecipients = async (apiUrl) => {
   let results = [];
-  let url = `${apiUrl}/18-4/recipients/?limit=10&offset=0`;
+  let url = `${apiUrl}/recipients/?limit=10&offset=0`;
 
   while (url) {
     const res = await fetch(url);

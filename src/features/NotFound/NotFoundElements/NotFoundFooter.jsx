@@ -1,7 +1,6 @@
 import { cn } from "../../../utils";
 import useRecipientsCount from "../hooks/useGetRecipientsCount";
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const NotFoundFooter = () => {
   const count = useRecipientsCount();

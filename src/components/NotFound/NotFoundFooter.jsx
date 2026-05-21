@@ -1,8 +1,6 @@
 import { cn } from "../../utils";
 import useRecipientsCount from "./hooks/useGetRecipientsCount";
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
 const NotFoundFooter = () => {
   const count = useRecipientsCount();
 
@@ -13,14 +11,14 @@ const NotFoundFooter = () => {
       className={cn(
         "flex items-center gap-3 justify-center",
         "rounded-2xl px-5 py-3 w-[min(80vw,720px)]",
-        "bg-purple-500 mx-auto"
+        "bg-purple-500 mx-auto",
       )}
     >
       <span
         className={cn(
           "inline-flex items-center justify-center",
           "w-10 h-10 rounded-full bg-purple-600",
-          "text-20 text-white font-bold"
+          "text-20 text-white font-bold",
         )}
       >
         {count}

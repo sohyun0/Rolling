@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import { cn } from "../../../utils";
 import { validateFile } from "../../../utils/validate";
 import useCloudinaryUpload from "./useCloudinaryUpload";
 
@@ -46,7 +45,7 @@ const useOptionFileUpload = (onUpload) => {
 
       const uploadedUrls = await uploadFiles(validFiles);
       const newImages = uploadedUrls.filter(
-        (url) => !uploadedImages.includes(url)
+        (url) => !uploadedImages.includes(url),
       );
       if (newImages.length === 0) {
         showToast(TOAST_MESSAGES.duplicateFile);
@@ -56,7 +55,7 @@ const useOptionFileUpload = (onUpload) => {
       onUpload(newImages);
       showToast(TOAST_MESSAGES.uploadSuccess);
     },
-    [uploadFiles, uploadedImages, onUpload]
+    [uploadFiles, uploadedImages, onUpload],
   );
 
   const handleDrag = {

@@ -1,5 +1,5 @@
-import Icon from "../../../components/Icon/Icon";
-import { cn } from "../../../utils";
+import Icon from "../../../../components/Icon/Icon";
+import { cn } from "../../../../utils";
 const style = {
   iconStyle: "bg-gray-400 group-hover:bg-purple-500",
   textStyle:

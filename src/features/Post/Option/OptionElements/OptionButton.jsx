@@ -1,4 +1,4 @@
-import { cn } from "../../../utils";
+import { cn } from "../../../../utils";
 
 /**
  * 옵션 공통 컴포넌트 - (컬러/이미지 등) 버튼
@@ -20,7 +20,7 @@ const OptionButton = ({ isActive, className = "", children, ...props }) => {
       className={cn(
         "flex-[0_0_calc((100%-1rem)/2)] aspect-square rounded-2xl relative",
         "sm:flex-[0_0_calc((100%-(1rem*3))/4)]",
-        className
+        className,
       )}
       aria-pressed={isActive}
       {...props}

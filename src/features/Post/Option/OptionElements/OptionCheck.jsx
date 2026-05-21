@@ -1,4 +1,4 @@
-import Icon from "../../../components/Icon/Icon";
+import Icon from "../../../../components/Icon/Icon";
 
 /**
  * 옵션 공통 컴포넌트 - (컬러/이미지 등) 선택 시 표시되는 아이콘
